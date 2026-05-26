@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pasapalabra Test 50</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="app">
+    <section class="quiz-card">
+
+      <div class="top-bar">
+        <div>
+          <p class="label">Pasapalabra Test 50</p>
+          <h1>Pasapalabra</h1>
+        </div>
+
+        <div class="score-box">
+          <span id="aciertos">0</span>
+          <small>Aciertos</small>
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div>Fallos: <strong id="fallos">0</strong></div>
+        <div>Pasadas: <strong id="pasadas">0</strong></div>
+      </div>
+
+      <div class="rosco" id="rosco"></div>
+
+      <div class="progress-area">
+        <div class="progress-info">
+          <span id="contador">Pregunta 1 de 10</span>
+          <span id="empieza">EMPIEZA POR A</span>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <div class="status-box" id="estado">
+        Elige una respuesta
+      </div>
+
+      <div class="question-box">
+        <h2 id="pregunta"></h2>
+      </div>
+
+      <div class="answers-grid" id="opciones"></div>
+
+      <div class="actions">
+        <button class="main-btn secondary" onclick="pasarPregunta()">
+          PASAPALABRA 🐰
+        </button>
+
+        <button class="main-btn" onclick="siguientePregunta()">
+          SIGUIENTE →
+        </button>
+      </div>
+
+      <p id="resultado"></p>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
