@@ -1,16 +1,19 @@
-const preguntas = [
+const temas = [
   {
-     letra: "1",
-    pregunta: "¿Qué ley regula actualmente las cooperativas en Castilla-La Mancha?",
-    opciones: [
-      "Ley 20/2002, de 14 de noviembre",
-      "Ley 11/2010, de 4 de noviembre",
-      "Ley 27/1999, de 16 de julio",
-      "Ley 14/2011, de 16 de diciembre"
-    ],
-    correcta: 1
-  },
-  {
+    nombre: "TEST 1",
+    preguntas: [
+      {
+        letra: "1",
+        pregunta: "¿Qué ley regula actualmente las cooperativas en Castilla-La Mancha?",
+        opciones: [
+          "Ley 20/2002, de 14 de noviembre",
+          "Ley 11/2010, de 4 de noviembre",
+          "Ley 27/1999, de 16 de julio",
+          "Ley 14/2011, de 16 de diciembre"
+        ],
+        correcta: 1
+      },
+      {
     letra: "2",
     pregunta: "¿Cuál es el número mínimo de socios requerido para constituir una cooperativa de primer grado en Castilla-La Mancha?",
     opciones: [
@@ -153,29 +156,36 @@ const preguntas = [
   ],
   correcta: 2
 },
-{
-  letra: "15",
-  pregunta: "¿Qué carácter tiene el Registro de Cooperativas de Castilla-La Mancha según la Ley?",
-  opciones: [
-    "Registro administrativo",
-    "Registro jurídico",
-    "Registro mercantil especial",
-    "Registro fiscal"
-  ],
-  correcta: 1
-},{
-  letra: "16",
-  pregunta: "Según el artículo 43.1 de la Ley 11/2010, ¿cuál de las siguientes materias es de competencia exclusiva e indelegable de la Asamblea General?",
-  opciones: [
-    "La ejecución de los acuerdos de fusión aprobados por la asamblea",
-    "La determinación de la política salarial de los trabajadores asalariados",
-    "La aprobación del reglamento interno de la cooperativa",
-    "La designación del gerente de la sección de crédito"
-  ],
-  correcta: 2
-},
-{
-  letra: "17",
+      
+
+      {
+        letra: "15",
+        pregunta: "¿Qué carácter tiene el Registro de Cooperativas de Castilla-La Mancha según la Ley?",
+        opciones: [
+          "Registro administrativo",
+          "Registro jurídico",
+          "Registro mercantil especial",
+          "Registro fiscal"
+        ],
+        correcta: 1
+      }
+    ]
+  },
+  {
+    nombre: "TEST PRUEBA 2",
+    preguntas: [
+      {
+        letra: "16",
+        pregunta: "Según el artículo 43.1 de la Ley 11/2010, ¿cuál de las siguientes materias es de competencia exclusiva e indelegable de la Asamblea General?",
+        opciones: [
+          "La ejecución de los acuerdos de fusión aprobados por la asamblea",
+          "La determinación de la política salarial de los trabajadores asalariados",
+          "La aprobación del reglamento interno de la cooperativa",
+          "La designación del gerente de la sección de crédito"
+        ],
+        correcta: 2
+      },{
+      letra: "17",
   pregunta: "De conformidad con el artículo 48.1, ¿cuál es el quórum de constitución válido en segunda convocatoria para la Asamblea General, salvo disposición estatutaria que refuerce dicho quórum?",
   opciones: [
     "La presencia de al menos el 20% de los socios o 30 votos sociales",
@@ -317,30 +327,38 @@ const preguntas = [
   ],
   correcta: 1
 },
-{
-  letra: "30",
-  pregunta: "Según el artículo 43.3, la Asamblea General podrá decidir sobre recursos interpuestos contra decisiones del Órgano de Administración relativas a:",
-  opciones: [
-    "La aprobación de las cuentas anuales",
-    "Las altas y bajas de socios, inadmisión de aspirantes, suspensión de derechos y sanciones por faltas graves o muy graves",
-    "La designación de auditores de cuentas",
-    "La modificación del objeto social"
-  ],
-  correcta: 1
-},
-{
-  letra: "31",
-  pregunta: "En relación con el principio de participación económica de los socios, ¿qué establece la ley sobre la distribución de excedentes?",
-  opciones: [
-    "Deben distribuirse obligatoriamente en proporción al capital aportado",
-    "Pueden distribuirse en función de la actividad cooperativizada",
-    "Se reparten siempre a partes iguales",
-    "Solo pueden destinarse a reservas irrepartibles"
-  ],
-  correcta: 1
-},
-{
-  letra: "32",
+      // PREGUNTAS 17 A 29...
+
+      {
+        letra: "30",
+        pregunta: "Según el artículo 43.3, la Asamblea General podrá decidir sobre recursos interpuestos contra decisiones del Órgano de Administración relativas a:",
+        opciones: [
+          "La aprobación de las cuentas anuales",
+          "Las altas y bajas de socios, inadmisión de aspirantes, suspensión de derechos y sanciones por faltas graves o muy graves",
+          "La designación de auditores de cuentas",
+          "La modificación del objeto social"
+        ],
+        correcta: 1
+      }
+    ]
+  },
+
+  {
+    nombre: "TEST PRUEBA 3",
+    preguntas: [
+
+      {
+        letra: "31",
+        pregunta: "En relación con el principio de participación económica de los socios, ¿qué establece la ley sobre la distribución de excedentes?",
+        opciones: [
+          "Deben distribuirse obligatoriamente en proporción al capital aportado",
+          "Pueden distribuirse en función de la actividad cooperativizada",
+          "Se reparten siempre a partes iguales",
+          "Solo pueden destinarse a reservas irrepartibles"
+        ],
+        correcta: 1
+      },{
+        letra: "32",
   pregunta: "¿Cuál es el número mínimo de socios para constituir una cooperativa de primer grado en Castilla-La Mancha?",
   opciones: [
     "2",
@@ -537,18 +555,24 @@ const preguntas = [
   ],
   correcta: 2
 },
-{
-  letra: "50",
-  pregunta: "En caso de liquidación, el haber líquido sobrante:",
-  opciones: [
-    "Se reparte entre los socios",
-    "Se destina a una entidad pública o al movimiento cooperativo",
-    "Se reparte entre acreedores",
-    "Se devuelve al Estado"
-  ],
-  correcta: 1
-}
+      // PREGUNTAS 32 A 49...
+
+      {
+        letra: "50",
+        pregunta: "En caso de liquidación, el haber líquido sobrante:",
+        opciones: [
+          "Se reparte entre los socios",
+          "Se destina a una entidad pública o al movimiento cooperativo",
+          "Se reparte entre acreedores",
+          "Se devuelve al Estado"
+        ],
+        correcta: 1
+      }
+
+    ]
+  }
 ];
+
 let indice = 0;
 let seleccionada = null;
 let aciertos = 0;
@@ -556,7 +580,11 @@ let fallos = 0;
 let pasadas = 0;
 let respondidas = 0;
 let esperandoSiguiente = false;
+let temaActual = 0;
+let preguntas = temas[temaActual].preguntas;
 
+const selectorTema = document.getElementById("selectorTema");
+const nombreTema = document.getElementById("nombreTema");
 const rosco = document.getElementById("rosco");
 const preguntaTexto = document.getElementById("pregunta");
 const opcionesDiv = document.getElementById("opciones");
@@ -569,6 +597,50 @@ const progressFill = document.getElementById("progressFill");
 const aciertosHTML = document.getElementById("aciertos");
 const fallosHTML = document.getElementById("fallos");
 const pasadasHTML = document.getElementById("pasadas");
+
+function cargarSelectorTemas() {
+  selectorTema.innerHTML = "";
+
+  temas.forEach((tema, index) => {
+    const option = document.createElement("option");
+    option.value = index;
+    option.textContent = tema.nombre;
+    selectorTema.appendChild(option);
+  });
+
+  selectorTema.value = temaActual;
+  nombreTema.textContent = temas[temaActual].nombre;
+}
+
+function cambiarTema() {
+  const card = document.querySelector(".quiz-card");
+
+  card.classList.remove("cambiando");
+
+  void card.offsetWidth;
+
+  card.classList.add("cambiando");
+  
+  temaActual = Number(selectorTema.value);
+  preguntas = temas[temaActual].preguntas;
+
+  indice = 0;
+  seleccionada = null;
+  aciertos = 0;
+  fallos = 0;
+  pasadas = 0;
+  respondidas = 0;
+  esperandoSiguiente = false;
+
+  document.querySelector(".actions").style.display = "flex";
+
+  nombreTema.textContent = temas[temaActual].nombre;
+
+  resultado.textContent = "";
+  actualizarStats();
+  crearRosco();
+  mostrarPregunta();
+}
 
 function crearRosco() {
   rosco.innerHTML = "";
@@ -775,5 +847,6 @@ function finalizarJuego() {
   document.querySelector(".actions").style.display = "none";
 }
 
+cargarSelectorTemas();
 crearRosco();
 mostrarPregunta();

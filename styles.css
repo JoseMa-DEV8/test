@@ -40,13 +40,14 @@ body {
   margin-bottom: 22px;
 }
 
-.label {
+.label,
+#nombreTema {
   margin: 0 0 4px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #b07a5a;
-  font-size: 13px;
-  font-weight: bold;
+  color: #ff8c5a;
+  font-size: 14px;
+  font-weight: 900;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -100,17 +101,76 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* CAJA SELECTOR DE TEMAS */
+
+.tema-box {
+  margin-bottom: 24px;
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255, 249, 243, 0.9);
+  border: 1px solid rgba(240, 201, 168, 0.7);
+  box-shadow: 0 10px 25px rgba(180, 100, 50, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.tema-box label {
+  font-size: 15px;
+  font-weight: 900;
+  color: #7a4a2a;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tema-box select {
+  flex: 1;
+  min-width: 220px;
+  padding: 14px 18px;
+  border-radius: 999px;
+  border: 2px solid #f0c9a8;
+  background: linear-gradient(135deg, #fff9f3, #fff0e0);
+  color: #3d2b1f;
+  font-size: 15px;
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s ease;
+  box-shadow: 0 6px 0 #f0c9a8;
+}
+
+.tema-box select:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 0 #d4a882;
+}
+
+.tema-box select:focus {
+  border-color: #ff8c5a;
+  box-shadow: 0 0 0 4px rgba(255, 140, 90, 0.2);
+}
+
+.tema-box option {
+  font-weight: 700;
+}
+
+/* ROSCO */
+
 .rosco {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 24px;
+  max-width: 720px;
+  margin: 0 auto 24px;
 }
 
 .letra {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: #f5d9c0;
   color: #7a4a2a;
@@ -120,6 +180,11 @@ h1 {
   font-weight: 900;
   font-family: Arial, Helvetica, sans-serif;
   box-shadow: 0 5px 0 #d4a882;
+  transition: 0.2s ease;
+}
+
+.letra:hover {
+  transform: scale(1.08);
 }
 
 .letra.activa {
@@ -273,41 +338,7 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@keyframes popIn {
-  from { transform: scale(0.95); opacity: 0; }
-  to   { transform: scale(1);    opacity: 1; }
-}
-
-@keyframes slideQuestion {
-  from { transform: translateX(-18px); opacity: 0; }
-  to   { transform: translateX(0);     opacity: 1; }
-}
-
-@media (max-width: 768px) {
-  .quiz-card { padding: 20px; }
-  .top-bar   { align-items: flex-start; }
-  h1 { font-size: 34px; }
-  .answers-grid  { grid-template-columns: 1fr; }
-  .question-box h2 { font-size: 20px; }
-  .actions { flex-direction: column; }
-  .main-btn { width: 100%; }
-}
-
-@media (max-width: 480px) {
-  body { padding: 12px; align-items: flex-start; }
-  .quiz-card { padding: 16px; border-radius: 22px; margin-top: 10px; }
-  .top-bar { flex-direction: column; align-items: stretch; gap: 14px; }
-  h1 { font-size: 31px; text-align: center; }
-  .label { text-align: center; font-size: 12px; }
-  .score-box { width: 100%; }
-  .stats-row { flex-direction: column; }
-  .progress-info { flex-direction: column; text-align: center; font-size: 14px; }
-  .status-box { width: 100%; text-align: center; font-size: 14px; }
-  .question-box { padding: 18px; border-radius: 20px; }
-  .question-box h2 { font-size: 18px; text-align: center; }
-  .opcion { min-height: auto; padding: 15px; font-size: 14px; }
-  .letra { width: 36px; height: 36px; font-size: 14px; }
-}
+/* MODAL */
 
 .modal-overlay {
   position: fixed;
@@ -354,4 +385,218 @@ h1 {
 
 .modal-card .main-btn {
   width: 100%;
+}
+
+/* ANIMACIONES */
+
+@keyframes popIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideQuestion {
+  from {
+    transform: translateX(-18px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .quiz-card {
+    padding: 20px;
+  }
+
+  .top-bar {
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .answers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .question-box h2 {
+    font-size: 20px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .main-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .tema-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tema-box label {
+    text-align: center;
+  }
+
+  .tema-box select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+    align-items: flex-start;
+  }
+
+  .quiz-card {
+    padding: 16px;
+    border-radius: 22px;
+    margin-top: 10px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  h1 {
+    font-size: 31px;
+    text-align: center;
+  }
+
+  .label,
+  #nombreTema {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .score-box {
+    width: 100%;
+  }
+
+  .stats-row {
+    flex-direction: column;
+  }
+
+  .progress-info {
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .status-box {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .question-box {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .question-box h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .opcion {
+    min-height: auto;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .letra {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
+}
+/* VOLTERETA DIAGONAL ÉPICA */
+
+.quiz-card {
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 2000px;
+}
+
+.quiz-card.cambiando {
+  animation: diagonalFlip 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes diagonalFlip {
+
+  0% {
+    transform:
+      perspective(2000px)
+      rotateX(0deg)
+      rotateY(0deg)
+      rotateZ(0deg)
+      scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  20% {
+    transform:
+      perspective(2000px)
+      rotateX(25deg)
+      rotateY(-25deg)
+      rotateZ(-8deg)
+      scale(0.92);
+    opacity: 0.7;
+    filter: blur(2px);
+  }
+
+  50% {
+    transform:
+      perspective(2000px)
+      rotateX(180deg)
+      rotateY(-180deg)
+      rotateZ(-15deg)
+      scale(0.75);
+    opacity: 0.2;
+    filter: blur(10px);
+  }
+
+  75% {
+    transform:
+      perspective(2000px)
+      rotateX(340deg)
+      rotateY(-340deg)
+      rotateZ(8deg)
+      scale(1.03);
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  100% {
+    transform:
+      perspective(2000px)
+      rotateX(360deg)
+      rotateY(-360deg)
+      rotateZ(0deg)
+      scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
 }
